@@ -1,0 +1,50 @@
+import Image from 'next/image'
+import React from 'react'
+import CraftBg from "../../../public/assets/images/home/craft.png"
+import StatsCounter from '../components/StatsCounter'
+import InfiniteImageSlider from '../components/InfiniteImageSlider'
+
+function Craft() {
+    return (
+        <div className=''>
+            <div className='carft-bg px-4 md:px-8 lg:px-[90px] py-10 pb-0 md:pb-10'>
+                <div className="animate-fade-in-up-scroll">
+                    <div className='md:flex md:gap-10 gap-5'>
+                        <div className='md:w-[35%] w-full flex items-center'>
+                            <h3 className='text-gradient md:text-[50px] text-[30px] font-[500]'>Crafting Entrepreneurs Since 1999</h3>
+                        </div>
+                        <div className='md:w-[65%] w-full'>
+                            <InfiniteImageSlider />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Mobile: background image as CSS background, stats on top */}
+            <div
+                className="block md:hidden w-full"
+                style={{
+                    backgroundImage: "url('/assets/images/home/craft.png')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}
+            >
+                <StatsCounter />
+            </div>
+            {/* Desktop: image and absolute overlay as before */}
+            <div className='hidden md:block relative w-full'>
+                <Image
+                    src={CraftBg}
+                    alt="Crafting Entrepreneurs"
+                    width={1000}
+                    height={1000}
+                    className="w-full md:h-full h-[250px] md:object-cover object-cover"
+                />
+                <div className='absolute top-0 left-0 w-full h-full z-1'>
+                    <StatsCounter />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Craft

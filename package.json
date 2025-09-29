@@ -1,0 +1,49 @@
+{
+  "name": "startex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+      "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@studio-freight/lenis": "^1.0.42",
+    "axios": "^1.10.0",
+    "cloudinary": "^2.7.0",
+    "critters": "^0.0.25",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.9.4",
+    "jose": "^6.0.11",
+    "js-cookie": "^3.0.5",
+    "js-token": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.511.0",
+    "mongoose": "^8.16.0",
+    "next": "15.3.1",
+    "next-sitemap": "^4.2.3",
+    "react": "^19.0.0",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-paginate": "^8.3.0",
+    "react-player": "^2.16.0",
+    "react-toastify": "^11.0.5",
+    "suneditor": "^2.47.6",
+    "suneditor-react": "^3.6.1",
+    "swiper": "^11.2.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.4.4",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "tailwindcss": "^4"
+  }
+  
+}
+

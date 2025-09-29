@@ -1,0 +1,33 @@
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import React from "react";
+import VatBanner from "./VatBanner";
+import Logo from "@/app/home/Logo";
+import BusinessTab from "@/app/workspace/business-center/BusinessTab";
+import ConsultantBanner from "@/app/components/ConsultantBanner";
+import VideoTesti from "@/app/home/VideoTesti";
+import Testimonials from "@/app/home/Testimonials";
+import Assoisiates from "@/app/home/Assoisiates";
+import Faq from "@/app/home/Faq";
+import VrTabs from "./VrTabs";
+
+function page() {
+  return (
+    <div>
+      
+      <VatBanner />
+      <Logo />
+      <VrTabs />
+
+      <ConsultantBanner />
+
+      <VideoTesti />
+      <Testimonials />
+      <Assoisiates />
+      <Faq />
+      
+    </div>
+  );
+}
+
+export default page;
