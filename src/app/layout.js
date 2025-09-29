@@ -1,38 +1,3 @@
-// import SmoothScrollWrapper from './components/SmoothScrollWrapper';
-// import './globals.css';
-// import { Poppins } from 'next/font/google';
-
-// const poppins = Poppins({
-//   subsets: ['latin'],
-//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // ✅ All weights
-//   variable: '--font-poppins',
-//   display: 'swap',
-// });
-
-// export const metadata = {
-//   title: 'Startex Hub | Businessman Services',
-//   description: 'Startex Hub offers expert business consultancy and entrepreneur support services tailored to help startups',
-// };
-
-
-
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en" className={poppins.variable}>
-//       <body className="antialiased">
-//              <SmoothScrollWrapper>
-//         {children}
-//         </SmoothScrollWrapper>
-//       </body>
-//     </html>
-//   );
-// }
-
-
-// layout.js (server component — no dynamic import)
-
-
 
 
 import './globals.css'

@@ -1,5 +1,6 @@
-// HomePage.tsx - OPTIMIZED SERVER COMPONENT (No ssr:false errors)
-import React from "react";
+'use client';
+
+import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 // ========================================
@@ -8,7 +9,7 @@ import dynamic from "next/dynamic";
 import Banner from "./Banner";
 
 // ========================================
-// HIGH PRIORITY: Near above-fold (Lazy loaded with SSR)
+// HIGH PRIORITY: Near above-fold (Lazy loaded)
 // ========================================
 const Craft = dynamic(() => import("./Craft"), {
   loading: () => <div className="h-96 bg-gray-100 animate-pulse" />,
@@ -19,7 +20,7 @@ const HomePackages = dynamic(() => import("./HomePackages"), {
 });
 
 // ========================================
-// MEDIUM PRIORITY: Mid-page content
+// MEDIUM PRIORITY: Mid-page content (Load on viewport)
 // ========================================
 const YoutubeSection = dynamic(() => import("./YoutubeSection"), {
   loading: () => <div className="h-96 bg-gray-100" />,
@@ -38,7 +39,7 @@ const TypesofBusiness = dynamic(() => import("./TypesofBusiness"), {
 });
 
 // ========================================
-// LOW PRIORITY: Below-fold content
+// LOW PRIORITY: Below-fold content (Load on demand)
 // ========================================
 const BankingPartners = dynamic(() => import("./BankingPartners"), {
   loading: () => <div className="h-64" />,

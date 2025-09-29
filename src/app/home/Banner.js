@@ -1,10 +1,21 @@
 import React from "react";
-import BusinessTabs from "../components/BusinessTabs";
-import grad from "../../../public/assets/images/home/gr.png"
+import dynamic from 'next/dynamic';
 import Image from "next/image";
-import Logo from "./Logo";
-import SceduleSection from "./SceduleSection";
 import Link from "next/link";
+
+// Static imports for critical components
+import BusinessTabs from "../components/BusinessTabs";
+
+// Dynamic imports for below-fold components
+const Logo = dynamic(() => import("./Logo"), {
+  loading: () => <div className="h-20" />,
+  ssr: true
+});
+
+const SceduleSection = dynamic(() => import("./SceduleSection"), {
+  loading: () => <div className="h-40 bg-primary" />,
+  ssr: true
+});
 
 function Banner() {
   return (
